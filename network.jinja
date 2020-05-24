@@ -6,6 +6,6 @@ resources:
 - type: compute.v1.subnetwork
   name: {{ env["name"] }}
   properties:
-    network: $(ref.{{ properties["name"] }}.selfLink)
+    network: $(ref.{{ env["name"] }}.selfLink)
     ipCidrRange: {{ range }}
     region: {{ properties["region"] }}
