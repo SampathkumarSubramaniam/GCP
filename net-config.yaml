@@ -1,0 +1,10 @@
+imports:
+  - path: network.jinja
+resources:
+-name: network
+ type: network.jinja
+ properties:
+   region: us-east1
+   subnets:
+     -range:
+      name:
