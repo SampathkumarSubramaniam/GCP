@@ -1,10 +1,10 @@
 resources:
 - type: compute.v1.network
-  name: {{ properties["name"] }}
+  name: {{ env["name"] }}
   properties:
      autoCreateSubnetworks: false
 - type: compute.v1.subnetwork
-  name: {{ properties["name"] }}
+  name: {{ env["name"] }}
   properties:
     network: $(ref.{{ properties["name"] }}.selfLink)
     ipCidrRange: {{ range }}
